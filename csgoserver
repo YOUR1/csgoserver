@@ -1,20 +1,24 @@
 #!/bin/bash
 # Counter Strike: Global Offensive 
 # Server Management Script
-# Author: Daniel Gibbs
+# Author: Daniel Gibbs & Youri van den Bogert
 # Website: http://danielgibbs.co.uk
 # Version: 190313
 
 ### Variables ####
+## Server settings
+tickrate=128
+portnumber=27015
+
 
 # Notification Email
 # (on|off)
-emailnotification="on"
-email="youri@vandenbogert.eu"
+emailnotification="off"
+email="some@email.com"
 
 # Start vars
 defaultmap="de_dust2"
-parms="-console -game csgo -usercon -tickrate 128 +game_type 0 +game_mode 0 +mapgroup mg_bomb +map ${defaultmap}"
+parms="-console -game csgo -usercon -tickrate ${tickrate} -port ${portnumber} +game_type 0 +game_mode 0 +mapgroup mg_bomb +map ${defaultmap}"
 
 # Steam
 appid="740"
